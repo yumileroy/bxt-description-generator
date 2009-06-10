@@ -14,8 +14,8 @@ from jinja2 import Environment, PackageLoader
 def main():
 	# Check to see if we have all the information we need
 	try:
-		#directory = unicode(sys.argv[1])
-		directory = sys.argv[1]
+		directory = unicode(sys.argv[1])
+		#directory = sys.argv[1]
 		template = sys.argv[2]
 	except IndexError:
 		print "Usage: " + sys.argv[0] + " <directory> <template>"
@@ -26,7 +26,9 @@ def main():
 	
 	env = Environment(loader=PackageLoader('bxt_description_generator', 'templates'))
 	template = env.get_template(template)
-	print template.render(root=root)
+	#print template.render(root=root)
+	templaterender = template.render(root=root)
+	print templaterender.encode("utf-8")
 
 if __name__ == '__main__':
 	sys.exit(main())
