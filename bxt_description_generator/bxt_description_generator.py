@@ -26,9 +26,7 @@ def main():
 	
 	env = Environment(loader=PackageLoader('bxt_description_generator', 'templates'))
 	template = env.get_template(template)
-	#print template.render(root=root)
-	templaterender = template.render(root=root)
-	print templaterender.encode("utf-8")
+	print template.render(root=root).encode("utf-8")
 
 if __name__ == '__main__':
 	sys.exit(main())
