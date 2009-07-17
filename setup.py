@@ -6,7 +6,7 @@ import sys
 def main():
 	setup (
 		name = 'bxt_description_generator',
-		version = '0.2',
+		version = '0.2.1',
 		description = 'BoxTorrents Description Generator',
 		author = 'xiong_chiamiov',
 		author_email = 'xiong.chiamiov@gmail.com',
@@ -21,7 +21,7 @@ def main():
 		license = 'WTFPL',
 		entry_points = """
 			[console_scripts]
-			tgp = bxt_description_generator.bxt_description_generator:main
+			bdg = bxt_description_generator.bxt_description_generator:main
 		""",
 		classifiers = [
 			"Development Status :: 4 - Beta",
